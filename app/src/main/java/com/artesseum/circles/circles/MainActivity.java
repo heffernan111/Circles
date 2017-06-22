@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.Profile;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
@@ -26,10 +28,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main);
+        AccessToken accessToken = AccessToken.getCurrentAccessToken();
+        if (accessToken !=null){
+            //Profile profile=Profile.getCurrentProfile();
+            Intent mainMenuIntent = new Intent(this, MainMenu.class);
+            startActivity(mainMenuIntent);
+
+        }else
         loginButton = (LoginButton)findViewById(R.id.fb_login_button);
         textView = (TextView)findViewById(R.id.textView);
         callbackManager = CallbackManager.Factory.create();
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+
+
             @Override
             public void onSuccess(LoginResult loginResult) {
 
