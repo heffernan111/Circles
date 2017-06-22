@@ -25,11 +25,7 @@
         //Menu Activity
         <activity android:name=".MainMenu" />
         //Play Game Activity
-        <activity
-            android:name=".PlayGame"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_play_game"
-            android:theme="@style/FullscreenTheme"></activity>
+        <activity android:name=".PlayGame"></activity>
     </application>
 
 </manifest>
