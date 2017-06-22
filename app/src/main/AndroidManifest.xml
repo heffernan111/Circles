@@ -25,7 +25,8 @@
         //Menu Activity
         <activity android:name=".MainMenu" />
         //Play Game Activity
-        <activity android:name=".PlayGame"></activity>
+        <activity android:name=".PlayGame" />
+        //Game Activity
     </application>
 
 </manifest>

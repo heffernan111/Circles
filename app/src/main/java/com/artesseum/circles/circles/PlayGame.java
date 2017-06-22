@@ -3,10 +3,12 @@ package com.artesseum.circles.circles;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Random;
 
 
 public class PlayGame extends AppCompatActivity {
@@ -16,7 +18,10 @@ public class PlayGame extends AppCompatActivity {
     Button clickButton, Start_Button;
     CountDownTimer timer;
     int time = 10;
-    int clicks = 0;
+    int Score = 0;
+
+
+
 
 
 
@@ -35,11 +40,12 @@ public class PlayGame extends AppCompatActivity {
         Start_Button.setEnabled(true);
 
 
-        timer = new CountDownTimer(30000, 1000) {
+        timer = new CountDownTimer(10000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 time--;
                 timerText.setText("Time: "+ time);
+                scoreLabel.setText("Click "+ Score);
 
             }
 
@@ -47,14 +53,32 @@ public class PlayGame extends AppCompatActivity {
             public void onFinish() {
                 clickButton.setEnabled(false);
                 Start_Button.setEnabled(true);
+                Start_Button.setVisibility(View.VISIBLE);
+                timerText.setText("Time: 0");
+                scoreLabel.setText("Click "+ Score);
             }
         };
 
         clickButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                clicks++;
-                scoreLabel.setText("Click "+ clicks);
+                Score++;
+                scoreLabel.setText("Click "+ Score);
+                /////Moves button on click
+                Random r = new Random();
+                int buttonHeight;
+                int buttonWidth;
+                buttonHeight = clickButton.getHeight();
+                buttonWidth = clickButton.getWidth();
+                int xLeft = r.nextInt(480 - buttonHeight);
+                int yUp = r.nextInt(800 - buttonWidth);
+                int xRight = r.nextInt(480 + buttonHeight);
+                int yDown = r.nextInt(800 + buttonHeight);
+
+                clickButton.setX(xLeft);
+                clickButton.setY(yUp);
+                clickButton.setX(xRight);
+                clickButton.setY(yDown);
 
 
             }
@@ -67,6 +91,13 @@ public class PlayGame extends AppCompatActivity {
                 timer.start();
                 clickButton.setEnabled(true);
                 Start_Button.setEnabled(false);
+                Score = 0;
+                time = 10;
+                timerText.setText("Time: 0");
+                scoreLabel.setText("Click "+ Score);
+
+                Start_Button.setVisibility(View.INVISIBLE);
+
             }
 
 
