@@ -1,19 +1,18 @@
 package com.artesseum.circles.circles;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.view.Display;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
+import android.animation.ObjectAnimator;
+import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -29,22 +28,20 @@ public class PlayGame extends AppCompatActivity {
     int time = 10;
     int Score = 0;
 
-    private LinearLayout loOPenArea;
+
     private ImageView imageView;
     private DisplayMetrics metrics;
+    long animatorDuration = 1000;
+
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_playgame);
         metrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        loOPenArea = (LinearLayout) findViewById(R.id.frame);
 
         scoreLabel =(TextView) findViewById(R.id.scoreLabel);
         scoreLabelFinal = (TextView) findViewById(R.id.scoreLabelFinal);
@@ -57,58 +54,6 @@ public class PlayGame extends AppCompatActivity {
         clickButton.setVisibility(View.INVISIBLE);
         clickButton1.setVisibility(View.INVISIBLE);
         clickButton2.setVisibility(View.INVISIBLE);
-
-
-
-
-/// set random start for  buttons
-        Random r = new Random();
-        int buttonHeight;
-        int buttonWidth;
-        buttonHeight = clickButton.getHeight();
-        buttonWidth = clickButton.getWidth();
-      //  int xLeft = r.nextInt(480 - buttonHeight);
-        int yUp = r.nextInt(800 - buttonWidth);
-      //  int xRight = r.nextInt(480 + buttonHeight);
-        int yDown = r.nextInt(800 + buttonHeight);
-
-      //  clickButton.setX(xLeft);
-        clickButton.setY(yUp);
-      //  clickButton.setX(xRight);
-        clickButton.setY(yDown);
-
-        Random r2 = new Random();
-        int buttonHeight2;
-        int buttonWidth2;
-        buttonHeight2 = clickButton2.getHeight();
-        buttonWidth2 = clickButton2.getWidth();
-       // int xLeft2 = r2.nextInt(480 - buttonHeight2);
-        int yUp2 = r2.nextInt(800 - buttonWidth2);
-       // int xRight2 = r2.nextInt(480 + buttonHeight2);
-        int yDown2 = r2.nextInt(800 + buttonHeight2);
-
-      //  clickButton2.setX(xLeft2);
-        clickButton2.setY(yUp2);
-      //  clickButton2.setX(xRight2);
-        clickButton2.setY(yDown2);
-
-        Random r1 = new Random();
-        int buttonHeight1;
-        int buttonWidth1;
-        buttonHeight1 = clickButton1.getHeight();
-        buttonWidth1 = clickButton1.getWidth();
-      //  int xLeft1 = r1.nextInt(480 - buttonHeight1);
-        int yUp1 = r1.nextInt(800 - buttonWidth1);
-      //  int xRight1 = r1.nextInt(480 + buttonHeight1);
-        int yDown1 = r1.nextInt(800 + buttonHeight1);
-
-      //  clickButton1.setX(xLeft1);
-        clickButton1.setY(yUp1);
-      //  clickButton1.setX(xRight1);
-        clickButton1.setY(yDown1);
-
-
-
 
         scoreLabelFinal.setVisibility(View.INVISIBLE);
         clickButton.setEnabled(false);
@@ -149,22 +94,11 @@ public class PlayGame extends AppCompatActivity {
                 scoreLabel.setText("Click "+ Score);
                 /////Moves button on click
                 Random r = new Random();
-                int buttonHeight;
-                int buttonWidth;
-                buttonHeight = clickButton.getHeight();
-                buttonWidth = clickButton.getWidth();
-              //  int xLeft = r.nextInt(480 - buttonHeight);
-                int yUp = r.nextInt(800 - buttonWidth);
-             //   int xRight = r.nextInt(480 + buttonHeight);
-                int yDown = r.nextInt(800 + buttonHeight);
-
-             //   clickButton.setX(xLeft);
-                clickButton.setY(yUp);
-             //   clickButton.setX(xRight);
-                clickButton.setY(yDown);
 
 
-            }
+
+
+                        }
         });
 
         clickButton1.setOnClickListener(new View.OnClickListener(){
@@ -174,19 +108,6 @@ public class PlayGame extends AppCompatActivity {
                 scoreLabel.setText("Click "+ Score);
                 /////Moves button on click
                 Random r1 = new Random();
-                int buttonHeight;
-                int buttonWidth;
-                buttonHeight = clickButton1.getHeight();
-                buttonWidth = clickButton1.getWidth();
-             //   int xLeft = r1.nextInt(480 - buttonHeight);
-                int yUp = r1.nextInt(800 - buttonWidth);
-             //   int xRight = r1.nextInt(480 + buttonHeight);
-                int yDown = r1.nextInt(800 + buttonHeight);
-
-              //  clickButton1.setX(xLeft);
-                clickButton1.setY(yUp);
-              //  clickButton1.setX(xRight);
-                clickButton1.setY(yDown);
 
 
             }
@@ -197,21 +118,6 @@ public class PlayGame extends AppCompatActivity {
             public void onClick(View v){
                 Score++;
                 scoreLabel.setText("Click "+ Score);
-                /////Moves button on click
-                Random r2 = new Random();
-                int buttonHeight;
-                int buttonWidth;
-                buttonHeight = clickButton2.getHeight();
-                buttonWidth = clickButton2.getWidth();
-             //   int xLeft = r2.nextInt(480 - buttonHeight);
-                int yUp = r2.nextInt(800 - buttonWidth);
-             //   int xRight = r2.nextInt(480 + buttonHeight);
-                int yDown = r2.nextInt(800 + buttonHeight);
-
-             //   clickButton2.setX(xLeft);
-                clickButton2.setY(yUp);
-             //   clickButton2.setX(xRight);
-                clickButton2.setY(yDown);
 
 
             }
@@ -240,31 +146,96 @@ public class PlayGame extends AppCompatActivity {
                 scoreLabel.setVisibility(View.VISIBLE);
                 scoreLabelFinal.setVisibility(View.GONE);
 
+              final ObjectAnimator alphaAnimation = ObjectAnimator.ofFloat(clickButton, View.ALPHA, 1.0f, 0.0f);
+                alphaAnimation.setDuration(animatorDuration);
+                final ObjectAnimator alphaAnimation2 = ObjectAnimator.ofFloat(clickButton, View.ALPHA, 0.0f, 1.0f);
+                alphaAnimation2.setDuration(animatorDuration);
+                alphaAnimation.start();
+
+                alphaAnimation.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+                        super.onAnimationCancel(animation);
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        clickButton.setVisibility(clickButton.INVISIBLE);
+                        alphaAnimation2.setStartDelay(1000);
+                        alphaAnimation2.start();
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+                        super.onAnimationRepeat(animation);
+                    }
+
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        super.onAnimationStart(animation);
+                    }
+
+                    @Override
+                    public void onAnimationPause(Animator animation) {
+                        super.onAnimationPause(animation);
+                    }
+
+                    @Override
+                    public void onAnimationResume(Animator animation) {
+                        super.onAnimationResume(animation);
+                    }
+                });
+
+                alphaAnimation2.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+                        super.onAnimationCancel(animation);
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        alphaAnimation.setStartDelay(1000);
+                        alphaAnimation.start();
+                    }
+
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        super.onAnimationStart(animation);
+                        clickButton.setVisibility(clickButton.VISIBLE);
+                    }
+                });
+
+
+          /*  clickButton.animate()
+                    .alpha(0.0f)
+                    .setDuration(1000)
+                    .setListener(new AnimatorListenerAdapter() {
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            super.onAnimationEnd(animation);
+                            clickButton.setVisibility(clickButton.INVISIBLE);
+                            animation.
+
+                        }
+                    });
+
+*/
+
+
+
+
+
             }
 
 
         });
 
+
     }
 
-    public void addView(View v) {
-        imageView = new ImageView(this);
-        imageView.setImageResource(R.mipmap.ic_launcher);
-        loOPenArea.addView(imageView);
 
-        int leftMargin = new Random().nextInt(metrics.widthPixels - imageView.getWidth());;
-        int topMargin = new Random().nextInt(metrics.heightPixels - 2*imageView.getHeight());;
-
-        setMargins(imageView, leftMargin, topMargin, 0, 0);
-    }
-
-    private void setMargins(View view, int left, int top, int right, int bottom) {
-        if (view.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
-            ViewGroup.MarginLayoutParams p = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
-            p.setMargins(left, top, right, bottom);
-            view.requestLayout();
-        }
-    }
 }
 
 

@@ -52,12 +52,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCancel() {
 
-                    textView.setText("Login Cancelled");
-
             }
 
             @Override
             public void onError(FacebookException error) {
+                textView.getError();
+
 
             }
         });
