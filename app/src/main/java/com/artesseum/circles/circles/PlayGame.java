@@ -27,11 +27,12 @@ public class PlayGame extends AppCompatActivity {
     CountDownTimer timer;
     int time = 10;
     int Score = 0;
-
+    Random rand = new Random();
+    int n = rand.nextInt(1000) +1;
 
     private ImageView imageView;
     private DisplayMetrics metrics;
-    long animatorDuration = 1000;
+    long animatorDuration = n;
 
 
 
@@ -107,6 +108,8 @@ public class PlayGame extends AppCompatActivity {
                 clickButton6.setVisibility(View.INVISIBLE);
                 clickButton7.setVisibility(View.INVISIBLE);
                 clickButton8.setVisibility(View.INVISIBLE);
+
+
 
 
                 timerText.setVisibility(View.INVISIBLE);
@@ -197,6 +200,7 @@ public class PlayGame extends AppCompatActivity {
                 clickButton8.setEnabled(true);
 
 
+
                 Start_Button.setEnabled(false);
                 Score = 0;
                 time = 10;
@@ -219,7 +223,42 @@ public class PlayGame extends AppCompatActivity {
                 scoreLabelFinal.setVisibility(View.GONE);
 
 
-                ///////////////////Animations/////////////////////////Button1
+                //////////random numbers
+                Random randa = new Random();
+                final int a = rand.nextInt(1000) +1;
+
+                Random randb = new Random();
+                final int b = rand.nextInt(1000) +1;
+
+                Random randc = new Random();
+                final int c = rand.nextInt(1000) +1;
+
+                Random randd = new Random();
+                final int d = rand.nextInt(1000) +1;
+
+                Random rande = new Random();
+                final int e= rand.nextInt(1000) +1;
+
+                Random randf = new Random();
+                final int f = rand.nextInt(1000) +1;
+
+                Random randg = new Random();
+                final int g = rand.nextInt(1000) +1;
+
+                Random randh = new Random();
+                final int h = rand.nextInt(1000) +1;
+
+                Random randi = new Random();
+                final int i = rand.nextInt(1000) +1;
+
+
+
+
+
+
+
+
+                ///////////////////Animations/////////////////////////Button0
                 final ObjectAnimator alphaAnimation = ObjectAnimator.ofFloat(clickButton, View.ALPHA, 1.0f, 0.0f);
                 alphaAnimation.setDuration(animatorDuration);
                 final ObjectAnimator alphaAnimation2 = ObjectAnimator.ofFloat(clickButton, View.ALPHA, 0.0f, 1.0f);
@@ -231,7 +270,7 @@ public class PlayGame extends AppCompatActivity {
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
                         clickButton.setVisibility(clickButton.INVISIBLE);
-                        alphaAnimation2.setStartDelay(1000);
+                        alphaAnimation2.setStartDelay(a);
                         alphaAnimation2.start();
                     }
 
@@ -242,7 +281,7 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
-                        alphaAnimation.setStartDelay(1000);
+                        alphaAnimation.setStartDelay(a);
                         alphaAnimation.start();
                     }
 
@@ -254,30 +293,30 @@ public class PlayGame extends AppCompatActivity {
                 });
 
 
-
+                    ////animationbutton1/////////
                 final ObjectAnimator alphaAnimation3 = ObjectAnimator.ofFloat(clickButton1, View.ALPHA, 1.0f, 0.0f);
-                alphaAnimation.setDuration(animatorDuration);
+                alphaAnimation3.setDuration(animatorDuration);
                 final ObjectAnimator alphaAnimation4 = ObjectAnimator.ofFloat(clickButton1, View.ALPHA, 0.0f, 1.0f);
                 alphaAnimation4.setDuration(animatorDuration);
                 alphaAnimation3.start();
 
-                alphaAnimation.addListener(new AnimatorListenerAdapter() {
+                alphaAnimation3.addListener(new AnimatorListenerAdapter() {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
                         clickButton1.setVisibility(clickButton1.INVISIBLE);
-                        alphaAnimation4.setStartDelay(1000);
+                        alphaAnimation4.setStartDelay(b);
                         alphaAnimation4.start();
                     }
 
                 });
                 /////////fade in
-                alphaAnimation2.addListener(new AnimatorListenerAdapter() {
+                alphaAnimation4.addListener(new AnimatorListenerAdapter() {
 
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
-                        alphaAnimation3.setStartDelay(1000);
+                        alphaAnimation3.setStartDelay(b);
                         alphaAnimation3.start();
                     }
 
@@ -293,28 +332,28 @@ public class PlayGame extends AppCompatActivity {
 
 
                 final ObjectAnimator alphaAnimation5 = ObjectAnimator.ofFloat(clickButton2, View.ALPHA, 1.0f, 0.0f);
-                alphaAnimation.setDuration(animatorDuration);
+                alphaAnimation5.setDuration(animatorDuration);
                 final ObjectAnimator alphaAnimation6 = ObjectAnimator.ofFloat(clickButton2, View.ALPHA, 0.0f, 1.0f);
                 alphaAnimation6.setDuration(animatorDuration);
                 alphaAnimation5.start();
 
-                alphaAnimation.addListener(new AnimatorListenerAdapter() {
+                alphaAnimation5.addListener(new AnimatorListenerAdapter() {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
                         clickButton2.setVisibility(clickButton.INVISIBLE);
-                        alphaAnimation6.setStartDelay(1000);
+                        alphaAnimation6.setStartDelay(c);
                         alphaAnimation6.start();
                     }
 
                 });
                 /////////fade in
-                alphaAnimation2.addListener(new AnimatorListenerAdapter() {
+                alphaAnimation6.addListener(new AnimatorListenerAdapter() {
 
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
-                        alphaAnimation5.setStartDelay(1000);
+                        alphaAnimation5.setStartDelay(c);
                         alphaAnimation5.start();
                     }
 
@@ -325,7 +364,218 @@ public class PlayGame extends AppCompatActivity {
                     }
                 });
 
+                    ///////button3
+                final ObjectAnimator alphaAnimation7 = ObjectAnimator.ofFloat(clickButton3, View.ALPHA, 1.0f, 0.0f);
+                alphaAnimation7.setDuration(animatorDuration);
+                final ObjectAnimator alphaAnimation8 = ObjectAnimator.ofFloat(clickButton3, View.ALPHA, 0.0f, 1.0f);
+                alphaAnimation8.setDuration(animatorDuration);
+                alphaAnimation7.start();
 
+                alphaAnimation7.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        clickButton3.setVisibility(clickButton.INVISIBLE);
+                        alphaAnimation8.setStartDelay(d);
+                        alphaAnimation8.start();
+                    }
+
+                });
+                /////////fade in
+                alphaAnimation8.addListener(new AnimatorListenerAdapter() {
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        alphaAnimation7.setStartDelay(d);
+                        alphaAnimation7.start();
+                    }
+
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        super.onAnimationStart(animation);
+                        clickButton3.setVisibility(clickButton3.VISIBLE);
+                    }
+                });
+                        /////////////button 4
+                final ObjectAnimator alphaAnimation9 = ObjectAnimator.ofFloat(clickButton4, View.ALPHA, 1.0f, 0.0f);
+                alphaAnimation9.setDuration(animatorDuration);
+                final ObjectAnimator alphaAnimation10 = ObjectAnimator.ofFloat(clickButton4, View.ALPHA, 0.0f, 1.0f);
+                alphaAnimation10.setDuration(animatorDuration);
+                alphaAnimation9.start();
+
+                alphaAnimation9.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        clickButton4.setVisibility(clickButton4.INVISIBLE);
+                        alphaAnimation10.setStartDelay(e);
+                        alphaAnimation10.start();
+                    }
+
+                });
+                /////////fade in
+                alphaAnimation10.addListener(new AnimatorListenerAdapter() {
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        alphaAnimation9.setStartDelay(e);
+                        alphaAnimation9.start();
+                    }
+
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        super.onAnimationStart(animation);
+                        clickButton4.setVisibility(clickButton4.VISIBLE);
+                    }
+                });
+
+
+
+
+                /////////////button 5
+                final ObjectAnimator alphaAnimation11 = ObjectAnimator.ofFloat(clickButton5, View.ALPHA, 1.0f, 0.0f);
+                alphaAnimation11.setDuration(animatorDuration);
+                final ObjectAnimator alphaAnimation12 = ObjectAnimator.ofFloat(clickButton5, View.ALPHA, 0.0f, 1.0f);
+                alphaAnimation12.setDuration(animatorDuration);
+                alphaAnimation11.start();
+
+                alphaAnimation11.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        clickButton5.setVisibility(clickButton5.INVISIBLE);
+                        alphaAnimation12.setStartDelay(f);
+                        alphaAnimation12.start();
+                    }
+
+                });
+                /////////fade in
+                alphaAnimation12.addListener(new AnimatorListenerAdapter() {
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        alphaAnimation11.setStartDelay(f);
+                        alphaAnimation11.start();
+                    }
+
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        super.onAnimationStart(animation);
+                        clickButton5.setVisibility(clickButton5.VISIBLE);
+                    }
+                });
+
+
+
+                /////////////button 6
+                final ObjectAnimator alphaAnimation13 = ObjectAnimator.ofFloat(clickButton6, View.ALPHA, 1.0f, 0.0f);
+                alphaAnimation13.setDuration(animatorDuration);
+                final ObjectAnimator alphaAnimation14 = ObjectAnimator.ofFloat(clickButton6, View.ALPHA, 0.0f, 1.0f);
+                alphaAnimation14.setDuration(animatorDuration);
+                alphaAnimation13.start();
+
+                alphaAnimation13.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        clickButton6.setVisibility(clickButton6.INVISIBLE);
+                        alphaAnimation14.setStartDelay(g);
+                        alphaAnimation14.start();
+                    }
+
+                });
+                /////////fade in
+                alphaAnimation14.addListener(new AnimatorListenerAdapter() {
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        alphaAnimation13.setStartDelay(g);
+                        alphaAnimation13.start();
+                    }
+
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        super.onAnimationStart(animation);
+                        clickButton6.setVisibility(clickButton6.VISIBLE);
+                    }
+                });
+
+
+
+
+                /////////////button 7
+                final ObjectAnimator alphaAnimation15 = ObjectAnimator.ofFloat(clickButton7, View.ALPHA, 1.0f, 0.0f);
+                alphaAnimation15.setDuration(animatorDuration);
+                final ObjectAnimator alphaAnimation16 = ObjectAnimator.ofFloat(clickButton7, View.ALPHA, 0.0f, 1.0f);
+                alphaAnimation16.setDuration(animatorDuration);
+                alphaAnimation15.start();
+
+                alphaAnimation15.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        clickButton7.setVisibility(clickButton7.INVISIBLE);
+                        alphaAnimation16.setStartDelay(h);
+                        alphaAnimation16.start();
+                    }
+
+                });
+                /////////fade in
+                alphaAnimation16.addListener(new AnimatorListenerAdapter() {
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        alphaAnimation15.setStartDelay(h);
+                        alphaAnimation15.start();
+                    }
+
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        super.onAnimationStart(animation);
+                        clickButton7.setVisibility(clickButton7.VISIBLE);
+                    }
+                });
+
+
+
+                /////////////button 8
+                final ObjectAnimator alphaAnimation17 = ObjectAnimator.ofFloat(clickButton8, View.ALPHA, 1.0f, 0.0f);
+                alphaAnimation17.setDuration(animatorDuration);
+                final ObjectAnimator alphaAnimation18 = ObjectAnimator.ofFloat(clickButton8, View.ALPHA, 0.0f, 1.0f);
+                alphaAnimation18.setDuration(animatorDuration);
+                alphaAnimation17.start();
+
+                alphaAnimation17.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        clickButton8.setVisibility(clickButton8.INVISIBLE);
+                        alphaAnimation18.setStartDelay(i);
+                        alphaAnimation18.start();
+                    }
+
+                });
+                /////////fade in
+                alphaAnimation18.addListener(new AnimatorListenerAdapter() {
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        alphaAnimation17.setStartDelay(i);
+                        alphaAnimation17.start();
+                    }
+
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        super.onAnimationStart(animation);
+                        clickButton8.setVisibility(clickButton8.VISIBLE);
+                    }
+                });
 
 
 
