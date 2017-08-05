@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <provider android:authorities="com.facebook.app.FacebookContentProvider259174444560156"
+        android:name="com.facebook.FacebookContentProvider"
+        android:exported="true"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,7 +30,8 @@
         <activity android:name=".MainMenu" />
         //Play Game Activity
         <activity android:name=".PlayGame" />
-        //Game Activity
+        //Facebook Activity
+
     </application>
 
 </manifest>

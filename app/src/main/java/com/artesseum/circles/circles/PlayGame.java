@@ -28,11 +28,11 @@ public class PlayGame extends AppCompatActivity {
     int time = 10;
     int Score = 0;
     Random rand = new Random();
-    int n = rand.nextInt(1000) +1;
+    int v = rand.nextInt(1000) +50;
 
     private ImageView imageView;
     private DisplayMetrics metrics;
-    long animatorDuration = n;
+    long animatorDuration = v;
 
 
 
@@ -225,31 +225,58 @@ public class PlayGame extends AppCompatActivity {
 
                 //////////random numbers
                 Random randa = new Random();
-                final int a = rand.nextInt(1000) +1;
+                final int a = rand.nextInt(1000) +500;
 
                 Random randb = new Random();
-                final int b = rand.nextInt(1000) +1;
+                final int b = rand.nextInt(1000) +500;
 
                 Random randc = new Random();
-                final int c = rand.nextInt(1000) +1;
+                final int c = rand.nextInt(1000) +500;
 
                 Random randd = new Random();
-                final int d = rand.nextInt(1000) +1;
+                final int d = rand.nextInt(1000) +500;
 
                 Random rande = new Random();
-                final int e= rand.nextInt(1000) +1;
+                final int e= rand.nextInt(1000) +500;
 
                 Random randf = new Random();
-                final int f = rand.nextInt(1000) +1;
+                final int f = rand.nextInt(1000) +500;
 
                 Random randg = new Random();
-                final int g = rand.nextInt(1000) +1;
+                final int g = rand.nextInt(1000) +500;
 
                 Random randh = new Random();
-                final int h = rand.nextInt(1000) +1;
+                final int h = rand.nextInt(1000) +500;
 
                 Random randi = new Random();
-                final int i = rand.nextInt(1000) +1;
+                final int i = rand.nextInt(1000) +500;
+
+                Random randj = new Random();
+                final int j = rand.nextInt(1000) +500;
+
+                Random randk = new Random();
+                final int k = rand.nextInt(1000) +500;
+
+                Random randl = new Random();
+                final int l = rand.nextInt(1000) +500;
+
+                Random randm = new Random();
+                final int m = rand.nextInt(1000) +500;
+
+                Random randn = new Random();
+                final int n= rand.nextInt(1000) +500;
+
+                Random rando = new Random();
+                final int o = rand.nextInt(1000) +500;
+
+                Random randp = new Random();
+                final int p = rand.nextInt(1000) +500;
+
+                Random randq = new Random();
+                final int q = rand.nextInt(1000) +500;
+
+                Random randr = new Random();
+                final int r = rand.nextInt(1000) +500;
 
 
 
@@ -281,7 +308,7 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
-                        alphaAnimation.setStartDelay(a);
+                        alphaAnimation.setStartDelay(j);
                         alphaAnimation.start();
                     }
 
@@ -316,7 +343,7 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
-                        alphaAnimation3.setStartDelay(b);
+                        alphaAnimation3.setStartDelay(k);
                         alphaAnimation3.start();
                     }
 
@@ -353,7 +380,7 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
-                        alphaAnimation5.setStartDelay(c);
+                        alphaAnimation5.setStartDelay(l);
                         alphaAnimation5.start();
                     }
 
@@ -387,7 +414,7 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
-                        alphaAnimation7.setStartDelay(d);
+                        alphaAnimation7.setStartDelay(m);
                         alphaAnimation7.start();
                     }
 
@@ -420,7 +447,7 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
-                        alphaAnimation9.setStartDelay(e);
+                        alphaAnimation9.setStartDelay(n);
                         alphaAnimation9.start();
                     }
 
@@ -457,7 +484,7 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
-                        alphaAnimation11.setStartDelay(f);
+                        alphaAnimation11.setStartDelay(o);
                         alphaAnimation11.start();
                     }
 
@@ -493,7 +520,7 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
-                        alphaAnimation13.setStartDelay(g);
+                        alphaAnimation13.setStartDelay(p);
                         alphaAnimation13.start();
                     }
 
@@ -530,7 +557,7 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
-                        alphaAnimation15.setStartDelay(h);
+                        alphaAnimation15.setStartDelay(q);
                         alphaAnimation15.start();
                     }
 
@@ -566,7 +593,7 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
-                        alphaAnimation17.setStartDelay(i);
+                        alphaAnimation17.setStartDelay(r);
                         alphaAnimation17.start();
                     }
 
