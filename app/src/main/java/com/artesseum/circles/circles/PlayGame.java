@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.animation.ObjectAnimator;
 import android.widget.Button;
@@ -26,7 +25,7 @@ public class PlayGame extends AppCompatActivity {
     int time = 10;
     int Score = 0;
     Random rand = new Random();
-    int v = rand.nextInt(1000) +50;
+    int v = rand.nextInt(1000) +100;
 
     long animatorDuration = v;
 
@@ -68,6 +67,9 @@ public class PlayGame extends AppCompatActivity {
         clickButton8.setVisibility(View.INVISIBLE);
 
         scoreLabelFinal.setVisibility(View.INVISIBLE);
+        scoreLabel.setVisibility(View.INVISIBLE);
+        timerText.setVisibility(View.INVISIBLE);
+
         clickButton.setEnabled(false);
         clickButton1.setEnabled(false);
         clickButton2.setEnabled(false);
@@ -204,7 +206,7 @@ public class PlayGame extends AppCompatActivity {
             public void onClick(View v) {
                   Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                   sharingIntent.setType("text/plain");
-                  sharingIntent.putExtra(Intent.EXTRA_TEXT,"I just Scored" + Score);
+                  sharingIntent.putExtra(Intent.EXTRA_TEXT,"I just Scored " + Score);
                  startActivity(Intent.createChooser(sharingIntent, "Share via"));
             }
         });
@@ -256,59 +258,41 @@ public class PlayGame extends AppCompatActivity {
 
 
                 //////////random numbers
-                Random randa = new Random();
-                final int a = rand.nextInt(1000) +500;
+                final int a = rand.nextInt(800) +500;
 
-                Random randb = new Random();
-                final int b = rand.nextInt(1000) +500;
+                final int b = rand.nextInt(800) +500;
 
-                Random randc = new Random();
-                final int c = rand.nextInt(1000) +500;
+                final int c = rand.nextInt(800) +500;
 
-                Random randd = new Random();
-                final int d = rand.nextInt(1000) +500;
+                final int d = rand.nextInt(800) +500;
 
-                Random rande = new Random();
-                final int e= rand.nextInt(1000) +500;
+                final int e= rand.nextInt(800) +500;
 
-                Random randf = new Random();
-                final int f = rand.nextInt(1000) +500;
+                final int f = rand.nextInt(800) +500;
 
-                Random randg = new Random();
-                final int g = rand.nextInt(1000) +500;
+                final int g = rand.nextInt(800) +500;
 
-                Random randh = new Random();
-                final int h = rand.nextInt(1000) +500;
+                final int h = rand.nextInt(800) +500;
 
-                Random randi = new Random();
-                final int i = rand.nextInt(1000) +500;
+                final int i = rand.nextInt(800) +500;
 
-                Random randj = new Random();
-                final int j = rand.nextInt(1000) +500;
+                final int j = rand.nextInt(800) +500;
 
-                Random randk = new Random();
-                final int k = rand.nextInt(1000) +500;
+                final int k = rand.nextInt(800) +500;
 
-                Random randl = new Random();
-                final int l = rand.nextInt(1000) +500;
+                final int l = rand.nextInt(800) +500;
 
-                Random randm = new Random();
-                final int m = rand.nextInt(1000) +500;
+                final int m = rand.nextInt(800) +500;
 
-                Random randn = new Random();
-                final int n= rand.nextInt(1000) +500;
+                final int n= rand.nextInt(800) +500;
 
-                Random rando = new Random();
-                final int o = rand.nextInt(1000) +500;
+                final int o = rand.nextInt(800) +500;
 
-                Random randp = new Random();
-                final int p = rand.nextInt(1000) +500;
+                final int p = rand.nextInt(800) +500;
 
-                Random randq = new Random();
-                final int q = rand.nextInt(1000) +500;
+                final int q = rand.nextInt(800) +500;
 
-                Random randr = new Random();
-                final int r = rand.nextInt(1000) +500;
+                final int r = rand.nextInt(800) +500;
 
 
 

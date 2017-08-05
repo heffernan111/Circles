@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:screenOrientation="portrait"
     android:paddingBottom="16dp"
+    android:background="#000000"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
