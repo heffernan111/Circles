@@ -2,17 +2,15 @@ package com.artesseum.circles.circles;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
-import android.animation.AnimatorSet;
+import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.animation.ObjectAnimator;
-import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -23,15 +21,13 @@ public class PlayGame extends AppCompatActivity {
 
     TextView scoreLabel, timerText, scoreLabelFinal;
     ImageButton clickButton,clickButton1,clickButton2,clickButton3,clickButton4,clickButton5,clickButton6,clickButton7,clickButton8;
-    Button Start_Button;
+    Button Start_Button,Share_Button;
     CountDownTimer timer;
     int time = 10;
     int Score = 0;
     Random rand = new Random();
     int v = rand.nextInt(1000) +50;
 
-    private ImageView imageView;
-    private DisplayMetrics metrics;
     long animatorDuration = v;
 
 
@@ -42,7 +38,6 @@ public class PlayGame extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playgame);
-        metrics = new DisplayMetrics();
 
 
         scoreLabel =(TextView) findViewById(R.id.scoreLabel);
@@ -61,6 +56,7 @@ public class PlayGame extends AppCompatActivity {
 
 
         Start_Button = (Button) findViewById(R.id.Start_Button);
+        Share_Button = (Button) findViewById(R.id.share_btn);
         clickButton.setVisibility(View.INVISIBLE);
         clickButton1.setVisibility(View.INVISIBLE);
         clickButton2.setVisibility(View.INVISIBLE);
@@ -83,6 +79,7 @@ public class PlayGame extends AppCompatActivity {
         clickButton8.setEnabled(false);
 
         Start_Button.setEnabled(true);
+        Share_Button.setEnabled(true);
 
 
         timer = new CountDownTimer(10000, 1000) {
@@ -99,6 +96,9 @@ public class PlayGame extends AppCompatActivity {
                 clickButton.setEnabled(false);
                 Start_Button.setEnabled(true);
                 Start_Button.setVisibility(View.VISIBLE);
+                Share_Button.setEnabled(true);
+                Share_Button.setVisibility(View.VISIBLE);
+
                 clickButton.setVisibility(View.INVISIBLE);
                 clickButton1.setVisibility(View.INVISIBLE);
                 clickButton2.setVisibility(View.INVISIBLE);
@@ -112,10 +112,24 @@ public class PlayGame extends AppCompatActivity {
 
 
 
+
+
+
                 timerText.setVisibility(View.INVISIBLE);
                 scoreLabel.setVisibility(View.INVISIBLE);
                 scoreLabelFinal.setVisibility(View.VISIBLE);
                 scoreLabelFinal.setText("Score: " + Score);
+
+
+
+
+
+              //  Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+              //  sharingIntent.setType("text/plain");
+              //  sharingIntent.putExtra(Intent.EXTRA_TEXT,"I just Scored" + Score);
+              // startActivity(Intent.createChooser(sharingIntent, "Share via"));
+
+
             }
         };
 
@@ -185,6 +199,20 @@ public class PlayGame extends AppCompatActivity {
         });
 
 
+        Share_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                  Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                  sharingIntent.setType("text/plain");
+                  sharingIntent.putExtra(Intent.EXTRA_TEXT,"I just Scored" + Score);
+                 startActivity(Intent.createChooser(sharingIntent, "Share via"));
+            }
+        });
+
+
+
+
+
         Start_Button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -202,12 +230,16 @@ public class PlayGame extends AppCompatActivity {
 
 
                 Start_Button.setEnabled(false);
+                Share_Button.setEnabled(false);
+
                 Score = 0;
                 time = 10;
                 timerText.setText("Time: 0");
                 scoreLabel.setText("Click "+ Score);
 
                 Start_Button.setVisibility(View.INVISIBLE);
+                Share_Button.setVisibility(View.INVISIBLE);
+
                 clickButton.setVisibility(View.VISIBLE);
                 clickButton1.setVisibility(View.VISIBLE);
                 clickButton2.setVisibility(View.VISIBLE);
