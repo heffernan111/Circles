@@ -89,7 +89,7 @@ public class PlayGame extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 time--;
                 timerText.setText("Time: "+ time);
-                scoreLabel.setText("Click "+ Score);
+                scoreLabel.setText("Score: "+ Score);
 
             }
 
@@ -139,64 +139,63 @@ public class PlayGame extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Score++;
-                scoreLabel.setText("Click "+ Score);
-
+                scoreLabel.setText("Score: "+ Score);
                         }
         });
         clickButton1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Score++;
-                scoreLabel.setText("Click "+ Score);
+                scoreLabel.setText("Score: "+ Score);
             }
         });
         clickButton2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Score++;
-                scoreLabel.setText("Click "+ Score);
+                scoreLabel.setText("Score: "+ Score);
             }
         });
         clickButton3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Score++;
-                scoreLabel.setText("Click "+ Score);
+                scoreLabel.setText("Score: "+ Score);
             }
         });
         clickButton4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Score++;
-                scoreLabel.setText("Click "+ Score);
+                scoreLabel.setText("Score: "+ Score);
             }
         });
         clickButton5.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Score++;
-                scoreLabel.setText("Click "+ Score);
+                scoreLabel.setText("Score: "+ Score);
             }
         });
         clickButton6.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Score++;
-                scoreLabel.setText("Click "+ Score);
+                scoreLabel.setText("Score: "+ Score);
             }
         });
         clickButton7.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Score++;
-                scoreLabel.setText("Click "+ Score);
+                scoreLabel.setText("Score: "+ Score);
             }
         });
         clickButton8.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Score++;
-                scoreLabel.setText("Click "+ Score);
+                scoreLabel.setText("Score: "+ Score);
             }
         });
 
@@ -237,7 +236,7 @@ public class PlayGame extends AppCompatActivity {
                 Score = 0;
                 time = 10;
                 timerText.setText("Time: 0");
-                scoreLabel.setText("Click "+ Score);
+                scoreLabel.setText("Score "+ Score);
 
                 Start_Button.setVisibility(View.INVISIBLE);
                 Share_Button.setVisibility(View.INVISIBLE);
@@ -311,7 +310,11 @@ public class PlayGame extends AppCompatActivity {
                 alphaAnimation.addListener(new AnimatorListenerAdapter() {
                     @Override
                     public void onAnimationEnd(Animator animation) {
+
+
                         super.onAnimationEnd(animation);
+
+
                         clickButton.setVisibility(clickButton.INVISIBLE);
                         alphaAnimation2.setStartDelay(a);
                         alphaAnimation2.start();
