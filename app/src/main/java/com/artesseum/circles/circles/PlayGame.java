@@ -14,6 +14,9 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+import static com.artesseum.circles.circles.R.color.butcolor;
+import static com.artesseum.circles.circles.R.color.colorAccent;
+
 
 public class PlayGame extends AppCompatActivity {
 
@@ -96,20 +99,71 @@ public class PlayGame extends AppCompatActivity {
             @Override
             public void onFinish() {
                 clickButton.setEnabled(false);
+                clickButton1.setEnabled(false);
+                clickButton2.setEnabled(false);
+                clickButton3.setEnabled(false);
+                clickButton4.setEnabled(false);
+                clickButton5.setEnabled(false);
+                clickButton6.setEnabled(false);
+                clickButton7.setEnabled(false);
+                clickButton8.setEnabled(false);
+
                 Start_Button.setEnabled(true);
                 Start_Button.setVisibility(View.VISIBLE);
                 Share_Button.setEnabled(true);
                 Share_Button.setVisibility(View.VISIBLE);
 
-                clickButton.setVisibility(View.INVISIBLE);
-                clickButton1.setVisibility(View.INVISIBLE);
-                clickButton2.setVisibility(View.INVISIBLE);
-                clickButton3.setVisibility(View.INVISIBLE);
-                clickButton4.setVisibility(View.INVISIBLE);
-                clickButton5.setVisibility(View.INVISIBLE);
-                clickButton6.setVisibility(View.INVISIBLE);
-                clickButton7.setVisibility(View.INVISIBLE);
-                clickButton8.setVisibility(View.INVISIBLE);
+
+
+
+
+
+
+
+
+//                clickButton.setVisibility(View.INVISIBLE);
+//                clickButton1.setVisibility(View.INVISIBLE);
+//                clickButton2.setVisibility(View.INVISIBLE);
+//                clickButton3.setVisibility(View.INVISIBLE);
+//                clickButton4.setVisibility(View.INVISIBLE);
+//                clickButton5.setVisibility(View.INVISIBLE);
+//                clickButton6.setVisibility(View.INVISIBLE);
+//                clickButton7.setVisibility(View.INVISIBLE);
+//                clickButton8.setVisibility(View.INVISIBLE);
+
+
+//                clickButton.setBackgroundColor(getColor(butcolor));
+//                clickButton.setClickable(false);
+//
+//                clickButton1.setBackgroundColor(getColor(butcolor));
+//                clickButton1.setClickable(false);
+//
+//                clickButton2.setBackgroundColor(getColor(butcolor));
+//                clickButton2.setClickable(false);
+//
+//                clickButton3.setBackgroundColor(getColor(butcolor));
+//                clickButton3.setClickable(false);
+//
+//                clickButton4.setBackgroundColor(getColor(butcolor));
+//                clickButton4.setClickable(false);
+//
+//                clickButton5.setBackgroundColor(getColor(butcolor));
+//                clickButton5.setClickable(false);
+//
+//                clickButton6.setBackgroundColor(getColor(butcolor));
+//                clickButton6.setClickable(false);
+//
+//                clickButton7.setBackgroundColor(getColor(butcolor));
+//                clickButton7.setClickable(false);
+//
+//                clickButton8.setBackgroundColor(getColor(butcolor));
+//                clickButton8.setClickable(false);
+
+
+
+
+
+
 
 
 
@@ -138,6 +192,8 @@ public class PlayGame extends AppCompatActivity {
         clickButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                clickButton.setBackgroundColor(getColor(colorAccent));
+                clickButton.setClickable(false);
                 Score++;
                 scoreLabel.setText("Score: "+ Score);
                         }
@@ -145,6 +201,8 @@ public class PlayGame extends AppCompatActivity {
         clickButton1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                clickButton1.setBackgroundColor(getColor(colorAccent));
+                clickButton1.setClickable(false);
                 Score++;
                 scoreLabel.setText("Score: "+ Score);
             }
@@ -152,6 +210,8 @@ public class PlayGame extends AppCompatActivity {
         clickButton2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                clickButton2.setBackgroundColor(getColor(colorAccent));
+                clickButton2.setClickable(false);
                 Score++;
                 scoreLabel.setText("Score: "+ Score);
             }
@@ -159,6 +219,8 @@ public class PlayGame extends AppCompatActivity {
         clickButton3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                clickButton3.setBackgroundColor(getColor(colorAccent));
+                clickButton3.setClickable(false);
                 Score++;
                 scoreLabel.setText("Score: "+ Score);
             }
@@ -166,6 +228,8 @@ public class PlayGame extends AppCompatActivity {
         clickButton4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                clickButton4.setBackgroundColor(getColor(colorAccent));
+                clickButton4.setClickable(false);
                 Score++;
                 scoreLabel.setText("Score: "+ Score);
             }
@@ -173,6 +237,8 @@ public class PlayGame extends AppCompatActivity {
         clickButton5.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                clickButton5.setBackgroundColor(getColor(colorAccent));
+                clickButton5.setClickable(false);
                 Score++;
                 scoreLabel.setText("Score: "+ Score);
             }
@@ -180,6 +246,8 @@ public class PlayGame extends AppCompatActivity {
         clickButton6.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                clickButton6.setBackgroundColor(getColor(colorAccent));
+                clickButton6.setClickable(false);
                 Score++;
                 scoreLabel.setText("Score: "+ Score);
             }
@@ -187,6 +255,8 @@ public class PlayGame extends AppCompatActivity {
         clickButton7.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                clickButton7.setBackgroundColor(getColor(colorAccent));
+                clickButton7.setClickable(false);
                 Score++;
                 scoreLabel.setText("Score: "+ Score);
             }
@@ -194,6 +264,8 @@ public class PlayGame extends AppCompatActivity {
         clickButton8.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                clickButton8.setBackgroundColor(getColor(colorAccent));
+                clickButton8.setClickable(false);
                 Score++;
                 scoreLabel.setText("Score: "+ Score);
             }
@@ -324,6 +396,7 @@ public class PlayGame extends AppCompatActivity {
                     /////////fade in
                 alphaAnimation2.addListener(new AnimatorListenerAdapter() {
 
+
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
@@ -334,8 +407,13 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationStart(Animator animation) {
                         super.onAnimationStart(animation);
+                        clickButton.setBackgroundColor(getColor(butcolor));
+                        clickButton.setClickable(true);
+
+
                         clickButton.setVisibility(clickButton.VISIBLE);
                     }
+
                 });
 
 
@@ -369,6 +447,9 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationStart(Animator animation) {
                         super.onAnimationStart(animation);
+                        clickButton1.setBackgroundColor(getColor(butcolor));
+                        clickButton1.setClickable(true);
+
                         clickButton1.setVisibility(clickButton1.VISIBLE);
                     }
                 });
@@ -406,6 +487,8 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationStart(Animator animation) {
                         super.onAnimationStart(animation);
+                        clickButton2.setBackgroundColor(getColor(butcolor));
+                        clickButton2.setClickable(true);
                         clickButton2.setVisibility(clickButton2.VISIBLE);
                     }
                 });
@@ -440,6 +523,8 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationStart(Animator animation) {
                         super.onAnimationStart(animation);
+                        clickButton3.setBackgroundColor(getColor(butcolor));
+                        clickButton3.setClickable(true);
                         clickButton3.setVisibility(clickButton3.VISIBLE);
                     }
                 });
@@ -473,6 +558,8 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationStart(Animator animation) {
                         super.onAnimationStart(animation);
+                        clickButton4.setBackgroundColor(getColor(butcolor));
+                        clickButton4.setClickable(true);
                         clickButton4.setVisibility(clickButton4.VISIBLE);
                     }
                 });
@@ -510,6 +597,8 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationStart(Animator animation) {
                         super.onAnimationStart(animation);
+                        clickButton5.setBackgroundColor(getColor(butcolor));
+                        clickButton5.setClickable(true);
                         clickButton5.setVisibility(clickButton5.VISIBLE);
                     }
                 });
@@ -546,6 +635,8 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationStart(Animator animation) {
                         super.onAnimationStart(animation);
+                        clickButton6.setBackgroundColor(getColor(butcolor));
+                        clickButton6.setClickable(true);
                         clickButton6.setVisibility(clickButton6.VISIBLE);
                     }
                 });
@@ -582,7 +673,9 @@ public class PlayGame extends AppCompatActivity {
 
                     @Override
                     public void onAnimationStart(Animator animation) {
-                        super.onAnimationStart(animation);
+
+                        clickButton7.setBackgroundColor(getColor(butcolor));
+                        clickButton7.setClickable(true);
                         clickButton7.setVisibility(clickButton7.VISIBLE);
                     }
                 });
@@ -619,6 +712,8 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationStart(Animator animation) {
                         super.onAnimationStart(animation);
+                        clickButton8.setBackgroundColor(getColor(butcolor));
+                        clickButton8.setClickable(true);
                         clickButton8.setVisibility(clickButton8.VISIBLE);
                     }
                 });

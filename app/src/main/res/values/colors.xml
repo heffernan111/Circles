@@ -3,6 +3,8 @@
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#474853</color>
     <color name="colorAccent">#730008</color>
+    <color name="butcolor">#def100</color>
+
 
     <color name="black_overlay">#66000000</color>
 </resources>
