@@ -14,7 +14,7 @@
         android:layout_height="62dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="38dp"
         android:text="Splatit"
         android:textColor="#ffffff"
         android:textAlignment="center"
@@ -23,7 +23,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.502" />
 
     <com.facebook.share.widget.ShareButton
         android:id="@+id/share_btn"
@@ -44,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="373dp"
+        android:layout_marginTop="419dp"
         android:background="#000000"
         android:textColor="#ffffff"
         android:text="Play"
@@ -53,22 +54,6 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp" />
-
-    <Button
-        android:id="@+id/exitButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="#000000"
-        android:text="Exit"
-        android:textColor="#ffffff"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playButton" />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="301dp"
@@ -86,24 +71,24 @@
         app:layout_constraintHorizontal_bias="0.511">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/buttonTapimage"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginLeft="26dp"
             android:layout_marginTop="117dp"
-            android:background="@drawable/square"
+            android:background="@color/butcolor"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/handimage"
         android:layout_width="79dp"
         android:layout_height="81dp"
-        app:srcCompat="@android:drawable/ic_menu_edit"
         android:layout_marginRight="53dp"
+        android:layout_marginTop="43dp"
         app:layout_constraintRight_toRightOf="@+id/constraintLayout2"
         app:layout_constraintTop_toTopOf="@+id/constraintLayout2"
-        android:layout_marginTop="43dp" />
+        app:srcCompat="@android:drawable/ic_menu_edit" />
 
 </android.support.constraint.ConstraintLayout>

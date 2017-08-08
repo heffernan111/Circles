@@ -382,12 +382,10 @@ public class PlayGame extends AppCompatActivity {
                 alphaAnimation.addListener(new AnimatorListenerAdapter() {
                     @Override
                     public void onAnimationEnd(Animator animation) {
-
-
                         super.onAnimationEnd(animation);
-
-
                         clickButton.setVisibility(clickButton.INVISIBLE);
+
+                        /////////////end game if not clicked
                         alphaAnimation2.setStartDelay(a);
                         alphaAnimation2.start();
                     }
