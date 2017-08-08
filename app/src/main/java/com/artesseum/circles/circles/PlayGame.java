@@ -278,7 +278,7 @@ public class PlayGame extends AppCompatActivity {
                   Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                   sharingIntent.setType("text/plain");
                   sharingIntent.putExtra(Intent.EXTRA_TEXT,"I just Scored " + Score);
-                 startActivity(Intent.createChooser(sharingIntent, "Share via"));
+                  startActivity(Intent.createChooser(sharingIntent, "Share via"));
             }
         });
 
@@ -384,8 +384,6 @@ public class PlayGame extends AppCompatActivity {
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
                         clickButton.setVisibility(clickButton.INVISIBLE);
-
-                        /////////////end game if not clicked
                         alphaAnimation2.setStartDelay(a);
                         alphaAnimation2.start();
                     }
