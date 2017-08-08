@@ -32,7 +32,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
             android:animateLayoutChanges="true"
-            android:background="@android:color/holo_red_dark"
+            android:background="@drawable/square"
             app:layout_constraintLeft_toRightOf="@+id/clickButton6"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/clickButton2" />
@@ -46,7 +46,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
             android:animateLayoutChanges="true"
-            android:background="@android:color/holo_red_dark"
+            android:background="@drawable/square"
             app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toRightOf="@+id/clickButton5"
@@ -60,7 +60,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:animateLayoutChanges="true"
-            android:background="@android:color/holo_red_dark"
+            android:background="@drawable/square"
             app:layout_constraintLeft_toRightOf="@+id/clickButton1"
             app:layout_constraintTop_toBottomOf="@+id/clickButton3" />
 
@@ -72,7 +72,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:animateLayoutChanges="true"
-            android:background="@android:color/holo_red_dark"
+            android:background="@drawable/square"
             app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintLeft_toRightOf="@+id/clickButton4"
             app:layout_constraintTop_toBottomOf="@+id/clickButton6" />
@@ -84,7 +84,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:background="@android:color/holo_red_dark"
+            android:background="@drawable/square"
             app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/clickButton1" />
@@ -97,7 +97,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginTop="16dp"
             android:animateLayoutChanges="true"
-            android:background="@android:color/holo_red_dark"
+            android:background="@drawable/square"
             app:layout_constraintLeft_toRightOf="@+id/clickButton"
             app:layout_constraintRight_toLeftOf="@+id/clickButton2"
             app:layout_constraintTop_toTopOf="parent" />
@@ -109,7 +109,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginTop="16dp"
             android:animateLayoutChanges="true"
-            android:background="@android:color/holo_red_dark"
+            android:background="@drawable/square"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -120,7 +120,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:animateLayoutChanges="true"
-            android:background="@android:color/holo_red_dark"
+            android:background="@drawable/square"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/clickButton" />
 
@@ -130,7 +130,7 @@
             android:layout_height="100dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="16dp"
-            android:background="@android:color/holo_red_dark"
+            android:background="@drawable/square"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
