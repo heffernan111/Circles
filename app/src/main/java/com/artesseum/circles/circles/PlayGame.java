@@ -22,8 +22,8 @@ public class PlayGame extends AppCompatActivity {
 
 
     TextView scoreLabel, timerText, scoreLabelFinal;
-    ImageButton clickButton,clickButton1,clickButton2,clickButton3,clickButton4,clickButton5,clickButton6,clickButton7,clickButton8;
-    Button Start_Button,Share_Button;
+    ImageButton clickButton1,clickButton2,clickButton3,clickButton4,clickButton5,clickButton6,clickButton7,clickButton8;
+    Button Start_Button,Share_Button,clickButton;
     CountDownTimer timer;
     int time = 10;
     int Score = 0;
@@ -31,6 +31,9 @@ public class PlayGame extends AppCompatActivity {
     int v = rand.nextInt(1000) +100;
 
     long animatorDuration = v;
+    long remainingTimer0;
+    boolean  button0Clicked = false;
+
 
 
 
@@ -45,7 +48,7 @@ public class PlayGame extends AppCompatActivity {
         scoreLabel =(TextView) findViewById(R.id.scoreLabel);
         scoreLabelFinal = (TextView) findViewById(R.id.scoreLabelFinal);
         timerText =(TextView) findViewById(R.id.timerText);
-        clickButton = (ImageButton) findViewById(R.id.clickButton);
+        clickButton = (Button) findViewById(R.id.clickButton);
         clickButton1 = (ImageButton) findViewById(R.id.clickButton1);
         clickButton2 = (ImageButton) findViewById(R.id.clickButton2);
         clickButton3 = (ImageButton) findViewById(R.id.clickButton3);
@@ -87,12 +90,15 @@ public class PlayGame extends AppCompatActivity {
         Share_Button.setEnabled(true);
 
 
-        timer = new CountDownTimer(10000, 1000) {
+        timer = new CountDownTimer(12000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 time--;
-                timerText.setText("Time: "+ time);
-                scoreLabel.setText("Score: "+ Score);
+                clickButton.setText(Long.toString(millisUntilFinished/100));
+                remainingTimer0 = millisUntilFinished;
+                timerText.setText("Time: "+ remainingTimer0/1000);
+
+
 
             }
 
@@ -194,8 +200,10 @@ public class PlayGame extends AppCompatActivity {
             public void onClick(View v){
                 clickButton.setBackgroundColor(getColor(colorAccent));
                 clickButton.setClickable(false);
-                Score++;
+                Score+=remainingTimer0/1000;
                 scoreLabel.setText("Score: "+ Score);
+                button0Clicked =true;
+
                         }
         });
         clickButton1.setOnClickListener(new View.OnClickListener(){
@@ -374,9 +382,9 @@ public class PlayGame extends AppCompatActivity {
 
                 ///////////////////Animations/////////////////////////Button0
                 final ObjectAnimator alphaAnimation = ObjectAnimator.ofFloat(clickButton, View.ALPHA, 1.0f, 0.0f);
-                alphaAnimation.setDuration(animatorDuration);
+                alphaAnimation.setDuration(remainingTimer0);
                 final ObjectAnimator alphaAnimation2 = ObjectAnimator.ofFloat(clickButton, View.ALPHA, 0.0f, 1.0f);
-                alphaAnimation2.setDuration(animatorDuration);
+                alphaAnimation2.setDuration(2000);
                 alphaAnimation.start();
 
                 alphaAnimation.addListener(new AnimatorListenerAdapter() {
@@ -384,7 +392,7 @@ public class PlayGame extends AppCompatActivity {
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
                         clickButton.setVisibility(clickButton.INVISIBLE);
-                        alphaAnimation2.setStartDelay(a);
+                        alphaAnimation2.setStartDelay(2000);
                         alphaAnimation2.start();
                     }
 
@@ -396,7 +404,7 @@ public class PlayGame extends AppCompatActivity {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
-                        alphaAnimation.setStartDelay(j);
+                        alphaAnimation.setStartDelay(4000);
                         alphaAnimation.start();
                     }
 
